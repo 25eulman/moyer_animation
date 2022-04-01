@@ -31,7 +31,7 @@ pygame.image.load('./assets/moyer_v2_3.png'),
 pygame.image.load('./assets/moyer_v2_4.png')]
 # changes size of all images to fit screen
 for i in range(len(my_images)):
-  my_images[i] = pygame.transform.scale(my_images[i], (200, 200))
+  my_images[i] = pygame.transform.scale(my_images[i], (500, 500))
 
 # set Window
 WINDOW = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -39,7 +39,7 @@ pygame.display.set_caption("Here Kitty Kitty!")
 WINDOW.fill(white)
 
 # set up your font
-font = pygame.font.Font('./fonts/Acme-Regular.ttf', 22)
+font = pygame.font.Font('./fonts/Acme-Regular.ttf', 45)
 
 # create your text
 text = font.render('Meow!', True, black, white)
@@ -51,9 +51,9 @@ True, black, white)
 textRect3 = text3.get_rect()
 
 # position the text
-textRect.center = (375,100)
-textRect2.center = (375,200)
-textRect3.center = (375,150)
+textRect.center = (1050,300)
+textRect2.center = (1050,400)
+textRect3.center = (1050,500)
 # display text
 WINDOW.blit(text, textRect)
 WINDOW.blit(text2, textRect2)
@@ -66,7 +66,7 @@ def drawShape():
   global image_count
   if (image_count == 4):
     image_count = 0
-  WINDOW.blit(my_images[image_count], (25, 50))
+  WINDOW.blit(my_images[image_count], (200, 200))
   pygame.display.flip()
   image_count += 1
   
